@@ -4,5 +4,3 @@ resources:
 - kafka-kraft.yaml
 - kafka-controller-pool.yaml
 - kafka-broker-pool.yaml
-- kafka-topic.yaml
-- kafka-user.yaml
