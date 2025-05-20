@@ -6,12 +6,18 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/bekiralpaydin/kafka'
-    targetRevision: main
-    path: kafka-ui
+    repoURL: https://provectus.github.io/kafka-ui-charts
+    chart: kafka-ui
+    targetRevision: 0.7.1
+    helm:
+      values: |
+        envs:
+          config:
+            KAFKA_CLUSTERS_0_NAME: local
+            KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: my-cluster-kafka-bootstrap.kafka:9092
   destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: kafka
+    server: https://kubernetes.default.svc
+    namespace: kafka-ui
   syncPolicy:
     automated:
       prune: true
