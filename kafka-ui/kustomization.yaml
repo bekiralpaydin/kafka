@@ -3,8 +3,8 @@ kind: Kustomization
 
 helmCharts:
   - name: kafka-ui
-    repo: https://provectus.github.io/kafka-ui
-    version: 0.7.1
+    repo: https://provectus.github.io/kafka-ui-charts
+    version: 0.7.1   # of de laatste versie uit de repo
     releaseName: kafka-ui
     namespace: kafka
     valuesInline:
